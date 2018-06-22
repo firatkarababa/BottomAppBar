@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav1"
+            android:icon="@drawable/baseline_exposure_plus_1_black_24"
+            android:title="@string/nav_item1" />
+        <item
+            android:id="@+id/nav2"
+            android:icon="@drawable/baseline_replay_10_black_24"
+            android:title="@string/nav_item2" />
+        <item
+            android:id="@+id/nav3"
+            android:icon="@drawable/baseline_forward_10_black_24"
+            android:title="@string/nav_item3" />
+    </group>
+</menu>

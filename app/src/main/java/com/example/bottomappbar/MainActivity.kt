@@ -8,10 +8,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.layout_bottomappbar.*
-import androidx.core.view.GravityCompat
-
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,24 +27,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            R.id.app_bar_fav -> toast("Fav menu item is clicked!")
-            R.id.app_bar_search -> toast("Search menu item is clicked!")
-            R.id.app_bar_settings -> toast("Settings item is clicked!")
-            android.R.id.home -> drawer_layout.openDrawer(Gravity.START)
+            R.id.app_bar_fav -> toast(getString(R.string.fav_clicked))
+            R.id.app_bar_search -> toast(getString(R.string.search_clicked))
+            R.id.app_bar_settings -> toast(getString(R.string.settings_clicked))
+            android.R.id.home -> {
+                val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
+                bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+            }
         }
         return true
     }
 
-    override fun onBackPressed() {
-        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
-            drawer_layout.closeDrawers()
-            return
-        }
-
-        super.onBackPressed()
-    }
-
-    // Create an extension method for easy Toast call
+    // This is an extension method for easy Toast call
     fun Context.toast(message: CharSequence) {
         val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
         toast.setGravity(Gravity.BOTTOM, 0, 325)

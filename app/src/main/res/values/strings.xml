@@ -2,7 +2,14 @@
     <string name="app_name">BottomAppBar</string>
     <string name="action_favorite">Mark Favorite</string>
     <string name="action_search">Search</string>
-    <string name="nav_item2">Navigation Item 2</string>
     <string name="nav_item1">Navigation Item 1</string>
+    <string name="nav_item2">Navigation Item 2</string>
+    <string name="nav_item3">Navigation Item 3</string>
     <string name="action_settings">Settings</string>
+    <string name="fav_clicked">Fav menu item is clicked!</string>
+    <string name="search_clicked">Search menu item is clicked!</string>
+    <string name="settings_clicked">Settings item is clicked!</string>
+    <string name="nav1_clicked">Bottom Navigation Drawer menu item 1</string>
+    <string name="nav2_clicked">Bottom Navigation Drawer menu item 2</string>
+    <string name="nav3_clicked">Bottom Navigation Drawer menu item 3</string>
 </resources>
